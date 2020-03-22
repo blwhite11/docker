@@ -13,7 +13,8 @@ LABEL    software="fastaq" \
     about.license_file="/usr/share/doc/fastaq/copyright" \ 
     extra.binaries="/usr/bin/fastaq" \ 
     about.tags="biology::format:fasta, biology::nucleic-acids, field::biology,:biology:bioinformatics, implemented-in::python,:commandline, role::program, scope::utility, use::analysing,:calculating,:checking,:converting,:filtering,:biological-sequence" 
-
+    description "https://hub.docker.com/repository/docker/blwhite11/docker_handson"
+    
 USER root
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && (apt-get install -t buster-backports -y fastaq || apt-get install -y fastaq) && apt-get clean && apt-get purge && rm -rf /var/lib/apt/lists/* /tmp/*
